@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Pizza</title>
+    <style>
+        * { box-sizing: border-box; margin:0; padding:0; }
+        body { font-family: 'Arial', sans-serif; background-color: #fff3e0; color: #333; }
+        header {
+            background: url('images/header.jpg') no-repeat center center/cover;
+            color: white; text-align: center; padding: 100px 20px; position: relative;
+        }
+        header::after {
+            content: ''; position: absolute; top:0; left:0; width:100%; height:100%; background-color: rgba(0,0,0,0.5);
+        }
+        header h1 { position: relative; font-size: 3em; margin-bottom: 10px; }
+        header p { position: relative; font-size: 1.2em; }
+        nav { text-align: center; background-color: #d32f2f; padding: 15px 0; }
+        nav a { color: white; text-decoration: none; margin: 0 20px; font-weight: bold; font-size: 1.1em; }
+        nav a:hover { text-decoration: underline; }
+        .content { max-width: 1000px; margin: 30px auto; padding: 0 20px; }
+        section { margin-bottom: 50px; }
+        h2 { color: #d32f2f; margin-bottom: 20px; text-align: center; }
+        .menu-items { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
+        .menu-card { background-color: white; border-radius: 10px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1); text-align: center; transition: transform 0.2s; }
+        .menu-card:hover { transform: scale(1.05); }
+        .menu-card img { width: 100%; height: 150px; object-fit: cover; }
+        .menu-card h3 { margin: 10px 0; color: #d32f2f; }
+        .menu-card p { margin-bottom: 10px; font-weight: bold; }
+        .phone { text-align: center; font-size: 1.5em; margin-top: 20px; }
+        .btn { display: inline-block; padding: 12px 25px; background-color: #d32f2f; color: white; text-decoration: none; border-radius: 5px; font-size: 1.1em; margin-top: 15px; }
+        .btn:hover { background-color: #b71c1c; }
+        footer { background-color: #f1f1f1; text-align: center; padding: 20px 0; font-size: 0.9em; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Simple Pizza</h1>
+        <p>Your cozy neighborhood pizzeria</p>
+    </header>
+
+    <nav>
+        <a href="#menu">Menu</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="content">
+        <section id="menu">
+            <h2>Our Menu</h2>
+            <div class="menu-items">
+                <div class="menu-card">
+                    <img src="images/margherita.jpg" alt="Margherita Pizza">
+                    <h3>Margherita Pizza</h3>
+                    <p>$12</p>
+                </div>
+                <div class="menu-card">
+                    <img src="images/pepperoni.jpg" alt="Pepperoni Pizza">
+                    <h3>Pepperoni Pizza</h3>
+                    <p>$14</p>
+                </div>
+                <div class="menu-card">
+                    <img src="images/veggie.jpg" alt="Veggie Pizza">
+                    <h3>Veggie Pizza</h3>
+                    <p>$13</p>
+                </div>
+                <div class="menu-card">
+                    <img src="images/garlic-bread.jpg" alt="Garlic Bread">
+                    <h3>Garlic Bread</h3>
+                    <p>$6</p>
+                </div>
+                <div class="menu-card">
+                    <img src="images/salad.jpg" alt="Salads">
+                    <h3>Salads</h3>
+                    <p>$7</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p class="phone">Call to order: <a href="tel:+15147810201">514-781-0201</a></p>
+            <div style="text-align:center;">
+                <a class="btn" href="tel:+15147810201">Order Now</a>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        &copy; 2025 Simple Pizza. All rights reserved.
+    </footer>
+</body>
+</html>
